@@ -198,7 +198,7 @@ func TestReportLoop(t *testing.T) {
 	expvar.lastNumGC = ms.NumGC // do not collect pauseGC
 	go expvar.Report()
 
-	time.Sleep(2 * time.Millisecond)
+	time.Sleep(10 * time.Millisecond)
 	_ = expvar.Close()
 }
 
