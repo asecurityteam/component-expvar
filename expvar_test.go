@@ -200,6 +200,7 @@ func TestReportLoop(t *testing.T) {
 	expvar.lastNumGC = ms.NumGC // do not collect pauseGC
 	go expvar.Report()
 
+	// TODO: update test to not need static sleeps since its flaky.
 	time.Sleep(10 * time.Millisecond)
 	_ = expvar.Close()
 }
