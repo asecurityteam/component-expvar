@@ -26,7 +26,8 @@ func TestReport(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	defer ctrl.Finish()
 
-	randGen := rand.New(rand.NewSource(time.Now().UnixNano()))
+	// TODO: refactor this to use crypto/rand. Triaged as temporarily ok due to it being a unit test.
+	randGen := rand.New(rand.NewSource(time.Now().UnixNano())) // nolint:go-lint,gosec
 	ms := &runtime.MemStats{
 		Alloc:        randGen.Uint64(),
 		Frees:        randGen.Uint64(),
@@ -78,8 +79,8 @@ func TestPauseGC(t *testing.T) {
 	for i := 0; i < 256; i++ {
 		pauseNS[i] = uint64(i)
 	}
-
-	randGen := rand.New(rand.NewSource(time.Now().UnixNano()))
+	// TODO: refactor this to use crypto/rand. Triaged as temporarily ok due to it being a unit test.
+	randGen := rand.New(rand.NewSource(time.Now().UnixNano())) // nolint:go-lint,gosec
 	ms := &runtime.MemStats{
 		NumGC:   uint32(randGen.Int()),
 		PauseNs: pauseNS,
@@ -105,8 +106,8 @@ func TestPauseGCWithWrap(t *testing.T) {
 	for i := 0; i < 256; i++ {
 		pauseNS[i] = uint64(i)
 	}
-
-	randGen := rand.New(rand.NewSource(time.Now().UnixNano()))
+	// TODO: refactor this to use crypto/rand. Triaged as temporarily ok due to it being a unit test.
+	randGen := rand.New(rand.NewSource(time.Now().UnixNano())) // nolint:go-lint,gosec
 	ms := &runtime.MemStats{
 		NumGC:   uint32(randGen.Int()),
 		PauseNs: pauseNS,
@@ -158,7 +159,8 @@ func TestReportLoop(t *testing.T) {
 	defer ctrl.Finish()
 
 	var mockStat = NewMockStat(ctrl)
-	randGen := rand.New(rand.NewSource(time.Now().UnixNano()))
+	// TODO: refactor this to use crypto/rand. Triaged as temporarily ok due to it being a unit test.
+	randGen := rand.New(rand.NewSource(time.Now().UnixNano())) // nolint:go-lint,gosec
 	ms := &runtime.MemStats{
 		Alloc:        randGen.Uint64(),
 		Frees:        randGen.Uint64(),
@@ -198,7 +200,8 @@ func TestReportLoop(t *testing.T) {
 	expvar.lastNumGC = ms.NumGC // do not collect pauseGC
 	go expvar.Report()
 
-	time.Sleep(2 * time.Millisecond)
+	// TODO: update test to not need static sleeps since its flaky.
+	time.Sleep(10 * time.Millisecond)
 	_ = expvar.Close()
 }
 
