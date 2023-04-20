@@ -18,6 +18,6 @@ require (
 	github.com/rs/xstats v0.0.0-20170813190920-c67367528e16 // indirect
 	github.com/sergi/go-diff v1.3.1 // indirect
 	github.com/spf13/cast v1.3.1 // indirect
-	golang.org/x/net v0.0.0-20190620200207-3b0461eec859 // indirect
+	golang.org/x/net v0.7.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
