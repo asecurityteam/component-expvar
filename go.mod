@@ -4,9 +4,9 @@ go 1.19
 
 require (
 	github.com/asecurityteam/component-stat v0.5.0
-	github.com/asecurityteam/settings v0.7.0
-	github.com/golang/mock v1.5.0
-	github.com/stretchr/testify v1.8.2
+	github.com/asecurityteam/settings v1.0.0
+	github.com/golang/mock v1.6.0
+	github.com/stretchr/testify v1.9.0
 )
 
 require (
@@ -18,6 +18,6 @@ require (
 	github.com/rs/xstats v0.0.0-20170813190920-c67367528e16 // indirect
 	github.com/sergi/go-diff v1.3.1 // indirect
 	github.com/spf13/cast v1.3.1 // indirect
-	golang.org/x/net v0.0.0-20190620200207-3b0461eec859 // indirect
+	golang.org/x/net v0.0.0-20210405180319-a5a99cb37ef4 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
