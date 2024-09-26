@@ -1,20 +1,7 @@
-<a id="markdown-component-connstate---settings-component-for-collecting-http-server-metrics" name="component-connstate---settings-component-for-collecting-http-server-metrics"></a>
 # component-expvar - Settings component for sending expvar metrics
 [![GoDoc](https://godoc.org/github.com/asecurityteam/component-expvar?status.svg)](https://godoc.org/github.com/asecurityteam/component-expvar)
 <!-- TOC -->
 
-- [component-connstate - Settings component for collecting HTTP server metrics](#component-connstate---settings-component-for-collecting-http-server-metrics)
-    - [Overview](#overview)
-    - [Quick Start](#quick-start)
-    - [Status](#status)
-    - [Contributing](#contributing)
-        - [Building And Testing](#building-and-testing)
-        - [License](#license)
-        - [Contributing Agreement](#contributing-agreement)
-
-<!-- /TOC -->
-
-<a id="markdown-overview" name="overview"></a>
 ## Overview
 
 This is a [`settings`](https://github.com/asecurityteam/settings) that enables
@@ -22,7 +9,6 @@ sending metrics for the values usually provided through the [Expvar HTTP
 endpoints](https://golang.org/pkg/expvar/). We have extended the set of metrics
 to also include the current goroutine count.
 
-<a id="markdown-quick-start" name="quick-start"></a>
 ## Quick Start
 
 ```golang
@@ -34,7 +20,7 @@ import (
 
     stat "github.com/asecurityteam/component-stat"
     expvar "github.com/asecurityteam/component-expvar"
-    "github.com/asecurityteam/settings"
+    "github.com/asecurityteam/settings/v2"
 )
 
 func main() {
@@ -48,16 +34,13 @@ func main() {
 }
 ```
 
-<a id="markdown-status" name="status"></a>
 ## Status
 
 This project is in incubation which means we are not yet operating this tool in
 production and the interfaces are subject to change.
 
-<a id="markdown-contributing" name="contributing"></a>
 ## Contributing
 
-<a id="markdown-building-and-testing" name="building-and-testing"></a>
 ### Building And Testing
 
 We publish a docker image called [SDCLI](https://github.com/asecurityteam/sdcli) that
@@ -85,12 +68,10 @@ the Makefile:
 
     Report the combined coverage for unit and integration tests
 
-<a id="markdown-license" name="license"></a>
 ### License
 
 This project is licensed under Apache 2.0. See LICENSE.txt for details.
 
-<a id="markdown-contributing-agreement" name="contributing-agreement"></a>
 ### Contributing Agreement
 
 Atlassian requires signing a contributor's agreement before we can accept a patch. If
