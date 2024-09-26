@@ -1,8 +1,6 @@
 # component-expvar - Settings component for sending expvar metrics
 [![GoDoc](https://godoc.org/github.com/asecurityteam/component-expvar?status.svg)](https://godoc.org/github.com/asecurityteam/component-expvar)
-[![Build Status](https://travis-ci.com/asecurityteam/component-expvar.png?branch=master)](https://travis-ci.com/asecurityteam/component-expvar)
-[![codecov.io](https://codecov.io/github/asecurityteam/component-expvar/coverage.svg?branch=master)](https://codecov.io/github/asecurityteam/component-expvar?branch=master)
-<!-- TOC -->autoauto- [component-expvar - Settings component for sending expvar metrics](#component-expvar---settings-component-for-sending-expvar-metrics)auto    - [Overview](#overview)auto    - [Quick Start](#quick-start)auto    - [Status](#status)auto    - [Contributing](#contributing)auto        - [Building And Testing](#building-and-testing)auto        - [License](#license)auto        - [Contributing Agreement](#contributing-agreement)autoauto<!-- /TOC -->
+<!-- TOC -->
 
 ## Overview
 
