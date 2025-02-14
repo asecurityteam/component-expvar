@@ -1,5 +1,20 @@
 # component-expvar - Settings component for sending expvar metrics
 [![GoDoc](https://godoc.org/github.com/asecurityteam/component-expvar?status.svg)](https://godoc.org/github.com/asecurityteam/component-expvar)
+
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=bugs)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=code_smells)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=coverage)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=ncloc)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=alert_status)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=security_rating)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=sqale_index)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=asecurityteam_component-expvar&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=asecurityteam_component-expvar)
+
+
 <!-- TOC -->
 
 ## Overview
