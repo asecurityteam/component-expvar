@@ -77,12 +77,17 @@ func TestPauseGC(t *testing.T) {
 
 	pauseNS := [256]uint64{}
 	for i := 0; i < 256; i++ {
-		pauseNS[i] = uint64(i)
+		// i is guaranteed to be 0-255, safe for uint64 conversion
+		pauseNS[i] = uint64(i) // nolint:gosec // G115: safe conversion in test, i is 0-255
 	}
 	// TODO: refactor this to use crypto/rand. Triaged as temporarily ok due to it being a unit test.
 	randGen := rand.New(rand.NewSource(time.Now().UnixNano())) // nolint:go-lint,gosec
+	randInt := randGen.Int()
+	if randInt < 0 {
+		randInt = 0
+	}
 	ms := &runtime.MemStats{
-		NumGC:   uint32(randGen.Int()),
+		NumGC:   uint32(randInt % (1 << 32)), // nolint:gosec // G115: modulo ensures value fits in uint32
 		PauseNs: pauseNS,
 	}
 
@@ -104,12 +109,17 @@ func TestPauseGCWithWrap(t *testing.T) {
 
 	pauseNS := [256]uint64{}
 	for i := 0; i < 256; i++ {
-		pauseNS[i] = uint64(i)
+		// i is guaranteed to be 0-255, safe for uint64 conversion
+		pauseNS[i] = uint64(i) // nolint:gosec // G115: safe conversion in test, i is 0-255
 	}
 	// TODO: refactor this to use crypto/rand. Triaged as temporarily ok due to it being a unit test.
 	randGen := rand.New(rand.NewSource(time.Now().UnixNano())) // nolint:go-lint,gosec
+	randInt := randGen.Int()
+	if randInt < 0 {
+		randInt = 0
+	}
 	ms := &runtime.MemStats{
-		NumGC:   uint32(randGen.Int()),
+		NumGC:   uint32(randInt % (1 << 32)), // nolint:gosec // G115: modulo ensures value fits in uint32
 		PauseNs: pauseNS,
 	}
 
